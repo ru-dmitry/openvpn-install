@@ -717,6 +717,8 @@ user nobody
 group $NOGROUP
 persist-key
 persist-tun
+duplicate-cn
+mssfix 1400
 keepalive 10 120
 topology subnet
 server 10.8.0.0 255.255.255.0

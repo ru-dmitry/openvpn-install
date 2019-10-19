@@ -657,6 +657,7 @@ function installOpenVPN () {
 		1)
 			echo "set_var EASYRSA_ALGO ec" > vars
 			echo "set_var EASYRSA_CURVE $CERT_CURVE" >> vars
+			echo "set_var EASYRSA_CERT_EXPIRE 3650" >> vars
 		;;
 		2)
 			echo "set_var EASYRSA_KEY_SIZE $RSA_KEY_SIZE" > vars
@@ -963,6 +964,7 @@ resolv-retry infinite
 nobind
 persist-key
 persist-tun
+mssfix 1400
 remote-cert-tls server
 verify-x509-name $SERVER_NAME name
 auth $HMAC_ALG

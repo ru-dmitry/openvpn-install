@@ -719,7 +719,6 @@ group $NOGROUP
 persist-key
 persist-tun
 duplicate-cn
-mssfix 1400
 keepalive 10 120
 topology subnet
 server 10.8.0.0 255.255.255.0
@@ -964,7 +963,6 @@ resolv-retry infinite
 nobind
 persist-key
 persist-tun
-mssfix 1400
 remote-cert-tls server
 verify-x509-name $SERVER_NAME name
 auth $HMAC_ALG
